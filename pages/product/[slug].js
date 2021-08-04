@@ -16,7 +16,7 @@ import Product from '../../models/Product'
 import db from '../../utils/db'
 import axios from 'axios'
 import { Store } from '../../utils/Store'
-import { Router, useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 
 export default function ProductScreen(props) {
   const router = useRouter()
