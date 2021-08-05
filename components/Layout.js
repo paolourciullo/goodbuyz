@@ -21,7 +21,7 @@ import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 
 export default function Layout({ title, description, children }) {
-  const router = useRouter
+  const router = useRouter()
   const { state, dispatch } = useContext(Store)
   const { darkMode, cart, userInfo } = state
   const theme = createTheme({
@@ -137,9 +137,7 @@ export default function Layout({ title, description, children }) {
         </AppBar>
         <Container className={classes.main}>{children}</Container>
         <footer className={classes.footer}>
-          <Typography>
-            Oh, you know all them rights are reserved by GoodBuyz.
-          </Typography>
+          <Typography>all them rights are reserved by GoodBuyz.</Typography>
         </footer>
       </ThemeProvider>
     </div>
